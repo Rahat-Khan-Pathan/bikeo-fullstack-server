@@ -174,10 +174,8 @@ const run = async () => {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-    res.send("Node server opened");
+    res.send("Hello from server");
 });
 app.listen(port, () => {
     console.log("Listening", port);
 });
-
-module.exports = app;
