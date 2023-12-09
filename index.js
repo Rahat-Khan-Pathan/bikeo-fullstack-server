@@ -34,10 +34,7 @@ const run = async () => {
         });
         // Get all products
         app.get("/products", async (req, res) => {
-            const divide = req.query.numbers;
-            const allOffers = await productsCollection
-                .find({})
-                .limit(parseInt(divide));
+            const allOffers = await productsCollection.find({});
             const convertedOffers = await allOffers.toArray();
             res.json(convertedOffers);
         });
